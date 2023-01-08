@@ -9,31 +9,44 @@ import SwiftUI
 
 struct Technical: View {
     
-    private let leadingInfo = "Текст слева"
-    private let trailingInfo = "Текст справа"
+    private var elements = Element.getElement()
     
     var body: some View {
-        VStack() {
-            HStack {
-                Text(leadingInfo)
-                    .font(fontLight16)
-                    .lineLimit(10)
-                    .minimumScaleFactor(0.90)
-                    .foregroundColor(.blackAR)
-                Spacer()
-                Text(trailingInfo)
-                    .font(fontLight16)
-                    .lineLimit(10)
-                    .minimumScaleFactor(0.90)
-                    .foregroundColor(.blackAR)
+        HStack {
+            VStack() {
+                ForEach(elements, id: \.sort) { element in
+                    Text("\(element.name)")
+                        .font(fontLight16)
+                        .lineLimit(10)
+                        .minimumScaleFactor(0.90)
+                        .foregroundColor(.blackAR)
+                        .padding(.horizontal)
+                }
+                .frame(width: WIDTH/2, alignment: .leading)
+                
             }
-            .padding(.horizontal)
+            VStack() {
+                ForEach(elements, id: \.sort) { element in
+                    Text("\(element.label)")
+                        .font(fontLight16)
+                        .lineLimit(10)
+                        .minimumScaleFactor(0.90)
+                        .foregroundColor(.blackAR)
+                        .padding(.horizontal)
+                }
+                .frame(width: WIDTH/2, alignment: .trailing)
+            }
         }
     }
 }
-    
-    struct Technical_Previews: PreviewProvider {
-        static var previews: some View {
-            Technical()
-        }
+
+
+
+struct Technical_Previews: PreviewProvider {
+    static var previews: some View {
+        Technical()
+            .previewInterfaceOrientation(.portrait)
     }
+}
+
+

@@ -56,13 +56,13 @@ extension Date {
 }
 
 // элемент коллекции
-struct Element: Codable {
-    // сортировка элемента внутри коллекции
-    var sort: Int = 0
-    // наименование элемента из коллекции
-    var name: String = ""
-    var label: String = ""
-}
+//struct Element: Codable {
+//    // сортировка элемента внутри коллекции
+//    var sort: Int = 0
+//    // наименование элемента из коллекции
+//    var name: String = ""
+//    var label: String = ""
+//}
 // элемент отзыв
 struct Feedback: Codable {
     var id = UUID().uuidString
