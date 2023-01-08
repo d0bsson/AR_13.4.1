@@ -11,6 +11,11 @@
 		D7256D62296A2FE2003442A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D61296A2FE2003442A1 /* ContentView.swift */; };
 		D7256D64296A2FE2003442A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7256D63296A2FE2003442A1 /* Assets.xcassets */; };
 		D7256D67296A2FE2003442A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7256D66296A2FE2003442A1 /* Preview Assets.xcassets */; };
+		D7256D6E296A2FFD003442A1 /* Technical.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D6D296A2FFD003442A1 /* Technical.swift */; };
+		D7256D72296A30F2003442A1 /* ProductProprietesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D71296A30F2003442A1 /* ProductProprietesView.swift */; };
+		D7256D74296A3160003442A1 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D73296A3160003442A1 /* SegmentedPicker.swift */; };
+		D7256D76296A3892003442A1 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D75296A3892003442A1 /* Feedbacks.swift */; };
+		D77BF91F296A464F009CFEAE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BF91E296A464F009CFEAE /* FeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		D7256D61296A2FE2003442A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7256D63296A2FE2003442A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7256D66296A2FE2003442A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7256D6D296A2FFD003442A1 /* Technical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technical.swift; sourceTree = "<group>"; };
+		D7256D71296A30F2003442A1 /* ProductProprietesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductProprietesView.swift; sourceTree = "<group>"; };
+		D7256D73296A3160003442A1 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
+		D7256D75296A3892003442A1 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
+		D77BF91E296A464F009CFEAE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,10 @@
 			children = (
 				D7256D5F296A2FE2003442A1 /* AR_13_4_1App.swift */,
 				D7256D61296A2FE2003442A1 /* ContentView.swift */,
+				D7256D73296A3160003442A1 /* SegmentedPicker.swift */,
+				D77BF91D296A4633009CFEAE /* Feedback */,
+				D7256D6D296A2FFD003442A1 /* Technical.swift */,
+				D7256D71296A30F2003442A1 /* ProductProprietesView.swift */,
 				D7256D63296A2FE2003442A1 /* Assets.xcassets */,
 				D7256D65296A2FE2003442A1 /* Preview Content */,
 			);
@@ -65,6 +79,15 @@
 				D7256D66296A2FE2003442A1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D77BF91D296A4633009CFEAE /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				D7256D75296A3892003442A1 /* Feedbacks.swift */,
+				D77BF91E296A464F009CFEAE /* FeedbackView.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77BF91F296A464F009CFEAE /* FeedbackView.swift in Sources */,
 				D7256D62296A2FE2003442A1 /* ContentView.swift in Sources */,
+				D7256D6E296A2FFD003442A1 /* Technical.swift in Sources */,
+				D7256D76296A3892003442A1 /* Feedbacks.swift in Sources */,
 				D7256D60296A2FE2003442A1 /* AR_13_4_1App.swift in Sources */,
+				D7256D72296A30F2003442A1 /* ProductProprietesView.swift in Sources */,
+				D7256D74296A3160003442A1 /* SegmentedPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
