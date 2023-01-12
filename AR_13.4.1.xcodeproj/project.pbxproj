@@ -15,8 +15,8 @@
 		D7256D72296A30F2003442A1 /* ProductProprietesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D71296A30F2003442A1 /* ProductProprietesView.swift */; };
 		D7256D74296A3160003442A1 /* SegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D73296A3160003442A1 /* SegmentedPicker.swift */; };
 		D7256D76296A3892003442A1 /* Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7256D75296A3892003442A1 /* Feedbacks.swift */; };
-		D77BF91F296A464F009CFEAE /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77BF91E296A464F009CFEAE /* FeedbackView.swift */; };
 		D799BB66296B4E080017E9F2 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = D799BB65296B4E080017E9F2 /* Element.swift */; };
+		D799BB692970A9E10017E9F2 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = D799BB682970A9E10017E9F2 /* Feedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +29,8 @@
 		D7256D71296A30F2003442A1 /* ProductProprietesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductProprietesView.swift; sourceTree = "<group>"; };
 		D7256D73296A3160003442A1 /* SegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPicker.swift; sourceTree = "<group>"; };
 		D7256D75296A3892003442A1 /* Feedbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedbacks.swift; sourceTree = "<group>"; };
-		D77BF91E296A464F009CFEAE /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 		D799BB65296B4E080017E9F2 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		D799BB682970A9E10017E9F2 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				D799BB67296B584D0017E9F2 /* Model */,
-				D77BF91D296A4633009CFEAE /* Feedback */,
 				D7256D61296A2FE2003442A1 /* ContentView.swift */,
-				D7256D73296A3160003442A1 /* SegmentedPicker.swift */,
-				D7256D71296A30F2003442A1 /* ProductProprietesView.swift */,
-				D7256D6D296A2FFD003442A1 /* Technical.swift */,
+				D799BB6A2970AC350017E9F2 /* Views */,
+				D799BB6B2970AC500017E9F2 /* Properties */,
 				D7256D5F296A2FE2003442A1 /* AR_13_4_1App.swift */,
 				D7256D63296A2FE2003442A1 /* Assets.xcassets */,
 				D7256D65296A2FE2003442A1 /* Preview Content */,
@@ -84,21 +82,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D77BF91D296A4633009CFEAE /* Feedback */ = {
-			isa = PBXGroup;
-			children = (
-				D7256D75296A3892003442A1 /* Feedbacks.swift */,
-				D77BF91E296A464F009CFEAE /* FeedbackView.swift */,
-			);
-			path = Feedback;
-			sourceTree = "<group>";
-		};
 		D799BB67296B584D0017E9F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D799BB65296B4E080017E9F2 /* Element.swift */,
+				D799BB682970A9E10017E9F2 /* Feedback.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D799BB6A2970AC350017E9F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7256D73296A3160003442A1 /* SegmentedPicker.swift */,
+				D7256D6D296A2FFD003442A1 /* Technical.swift */,
+				D7256D75296A3892003442A1 /* Feedbacks.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D799BB6B2970AC500017E9F2 /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				D7256D71296A30F2003442A1 /* ProductProprietesView.swift */,
+			);
+			path = Properties;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,8 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D77BF91F296A464F009CFEAE /* FeedbackView.swift in Sources */,
 				D7256D62296A2FE2003442A1 /* ContentView.swift in Sources */,
+				D799BB692970A9E10017E9F2 /* Feedback.swift in Sources */,
 				D7256D6E296A2FFD003442A1 /* Technical.swift in Sources */,
 				D799BB66296B4E080017E9F2 /* Element.swift in Sources */,
 				D7256D76296A3892003442A1 /* Feedbacks.swift in Sources */,

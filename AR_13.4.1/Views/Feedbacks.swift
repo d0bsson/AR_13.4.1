@@ -9,6 +9,8 @@ import SwiftUI
 
 struct Feedbacks: View {
     
+    private let feedbacks = Feedback.getFeedbacks()
+    
     var body: some View {
         VStack{
             ScrollView(.vertical) {
@@ -19,6 +21,7 @@ struct Feedbacks: View {
                     FeedbackExample()
                     FeedbackExample()
                 }
+                .frame(alignment: .bottom)
             }
         }
     }
@@ -32,10 +35,13 @@ struct Feedback_Previews: PreviewProvider {
 
 struct FeedbackExample: View {
     var body: some View {
-        RoundedRectangle(cornerRadius: 20, style: .continuous)
-            .frame(width: WIDTH - 8, height: HEIGHT/5, alignment: .bottom)
-            .foregroundColor(.whiteAR)
-            .addBorder(.red, width: 3, cornerRadius: 20)
+        ZStack {
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .frame(width: WIDTH - 8, height: HEIGHT/5, alignment: .bottom)
+                .foregroundColor(.whiteAR)
+                .addBorder(.red, width: 3, cornerRadius: 20)
+            
+        }
     }
 }
 

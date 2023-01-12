@@ -65,15 +65,15 @@ extension Date {
 //    var label: String = ""
 //}
 // элемент отзыв
-struct Feedback: Codable {
-    var id = UUID().uuidString
-    var date = Date().rusDateShort()
-    var sort: String
-    var userName: String = ""
-    var idName: String = ""
-    var rating: String = ""
-    var description: String = ""
-}
+//struct Feedback: Codable {
+//    var id = UUID().uuidString
+//    var date = Date().rusDateShort()
+//    var sort: String
+//    var userName: String = ""
+//    var idName: String = ""
+//    var rating: String = ""
+//    var description: String = ""
+//}
 
 
 //MARK: - основной блок для проработки окно вкладок
