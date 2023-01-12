@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct Feedbacks: View {
-    
     private let feedbacks = Feedback.getFeedbacks()
     
     var body: some View {
         VStack{
+            Spacer()
             ScrollView(.vertical) {
                 VStack {
-                    FeedbackExample()
-                    FeedbackExample()
-                    FeedbackExample()
-                    FeedbackExample()
-                    FeedbackExample()
+                    ForEach(feedbacks, id: \.sort) { feedback in
+                        Text("\(feedback.userName)")
+                            .font(Font.headline.weight(.bold))
+                        StarsView(rating: feedback.rating, maxRating: 5)
+                        Divider()
+                    }
                 }
-                .frame(alignment: .bottom)
             }
         }
     }
@@ -33,22 +33,31 @@ struct Feedback_Previews: PreviewProvider {
     }
 }
 
-struct FeedbackExample: View {
+struct StarsView: View {
+    var rating: Int
+    var maxRating: Int
+
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .frame(width: WIDTH - 8, height: HEIGHT/5, alignment: .bottom)
-                .foregroundColor(.whiteAR)
-                .addBorder(.red, width: 3, cornerRadius: 20)
-            
+        let stars = HStack(spacing: 0) {
+            ForEach(0..<maxRating, id: \.self) { _ in
+                Image(systemName: "star.fill")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
         }
+
+        stars.overlay(
+            GeometryReader { g in
+                let width = CGFloat(rating) / CGFloat(maxRating) * g.size.width
+                ZStack(alignment: .leading) {
+                    Rectangle()
+                        .frame(width: width)
+                        .foregroundColor(.yellow)
+                }
+            }
+            .mask(stars)
+        )
+        .foregroundColor(.gray)
     }
 }
 
-extension View {
-     public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
-         let roundedRect = RoundedRectangle(cornerRadius: cornerRadius)
-         return clipShape(roundedRect)
-              .overlay(roundedRect.strokeBorder(content, lineWidth: width))
-     }
- }
