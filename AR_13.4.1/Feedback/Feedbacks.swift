@@ -11,16 +11,13 @@ struct Feedbacks: View {
     
     var body: some View {
         VStack{
-            ScrollView(.horizontal) {
-                HStack {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .frame(width: 250, height: 100, alignment: .bottom)
-                        .foregroundColor(.whiteAR)
-                        .addBorder(.red, width: 3, cornerRadius: 20)
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .frame(width: 250, height: 100, alignment: .bottom)
-                        .foregroundColor(.whiteAR)
-                        .addBorder(.red, width: 3, cornerRadius: 20)
+            ScrollView(.vertical) {
+                VStack {
+                    FeedbackExample()
+                    FeedbackExample()
+                    FeedbackExample()
+                    FeedbackExample()
+                    FeedbackExample()
                 }
             }
         }
@@ -30,6 +27,15 @@ struct Feedbacks: View {
 struct Feedback_Previews: PreviewProvider {
     static var previews: some View {
         Feedbacks()
+    }
+}
+
+struct FeedbackExample: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 20, style: .continuous)
+            .frame(width: WIDTH - 8, height: HEIGHT/5, alignment: .bottom)
+            .foregroundColor(.whiteAR)
+            .addBorder(.red, width: 3, cornerRadius: 20)
     }
 }
 

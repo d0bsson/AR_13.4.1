@@ -9,6 +9,7 @@ import SwiftUI
 // MARK: - глобальные переменные и методы из проекта (справочно для совместимости)
 // глобальные константы в проекте
 let WIDTH = UIScreen.main.bounds.width
+let HEIGHT = UIScreen.main.bounds.height
 let scaleWidth = WIDTH / 320
 let fontLight16 = Font.system(size: scaleWidth * 16, weight: .light)
 // перечисление типов свойств
