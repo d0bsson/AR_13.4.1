@@ -12,14 +12,16 @@ struct Feedbacks: View {
     
     var body: some View {
         VStack{
-            Spacer()
             ScrollView(.vertical) {
                 VStack {
                     ForEach(feedbacks, id: \.sort) { feedback in
-                        Text("\(feedback.userName)")
-                            .font(Font.headline.weight(.bold))
-                        StarsView(rating: feedback.rating, maxRating: 5)
                         Divider()
+                        HStack {
+                            Text("\(feedback.userName)")
+                                .font(Font.headline.weight(.bold))
+                            StarsView(rating: feedback.rating, maxRating: 5)
+                        }
+                        Text("\(feedback.description)")
                     }
                 }
             }
@@ -36,16 +38,15 @@ struct Feedback_Previews: PreviewProvider {
 struct StarsView: View {
     var rating: Int
     var maxRating: Int
-
+    
     var body: some View {
         let stars = HStack(spacing: 0) {
             ForEach(0..<maxRating, id: \.self) { _ in
                 Image(systemName: "star.fill")
-                    .resizable()
                     .aspectRatio(contentMode: .fit)
             }
         }
-
+        
         stars.overlay(
             GeometryReader { g in
                 let width = CGFloat(rating) / CGFloat(maxRating) * g.size.width
@@ -55,7 +56,7 @@ struct StarsView: View {
                         .foregroundColor(.yellow)
                 }
             }
-            .mask(stars)
+                .mask(stars)
         )
         .foregroundColor(.gray)
     }
