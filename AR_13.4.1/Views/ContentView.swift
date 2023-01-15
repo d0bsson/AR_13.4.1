@@ -14,8 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            HStack() {
+            HStack(alignment: .center, spacing: 1) {
                 ForEach(PropretesCard.allCases, id: \.self ) { proprety in
                     Button {
                         self.proprety = proprety
@@ -23,7 +22,7 @@ struct ContentView: View {
                         Text(proprety.label)
                             .font(fontLight16)
                             .lineLimit(1)
-                            .minimumScaleFactor(0.70)
+                            .minimumScaleFactor(0.90)
                             .foregroundColor(self.proprety == proprety ? .cyanAR : .blackAR)
                             .padding(.vertical, 10)
                             .background(
@@ -31,10 +30,10 @@ struct ContentView: View {
                                     .foregroundColor(self.proprety == proprety ? .cyanAR.opacity(0.1) : .whiteAR)
                             )
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 5)
                 }
             }
-            .padding(.vertical, 15)
+            .padding(.vertical, 1)
             switch proprety {
             case .technical:
                 Technical()

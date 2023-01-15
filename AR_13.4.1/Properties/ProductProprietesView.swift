@@ -56,26 +56,6 @@ extension Date {
     }
 }
 
-// элемент коллекции
-//struct Element: Codable {
-//    // сортировка элемента внутри коллекции
-//    var sort: Int = 0
-//    // наименование элемента из коллекции
-//    var name: String = ""
-//    var label: String = ""
-//}
-// элемент отзыв
-//struct Feedback: Codable {
-//    var id = UUID().uuidString
-//    var date = Date().rusDateShort()
-//    var sort: String
-//    var userName: String = ""
-//    var idName: String = ""
-//    var rating: String = ""
-//    var description: String = ""
-//}
-
-
 //MARK: - основной блок для проработки окно вкладок
 // вьюшка вкладок
 struct ProductProprietesView: View {
@@ -91,7 +71,6 @@ struct ProductProprietesView: View {
     let description: String
     let linkName: String
     let linkURL: String
-    
     
     // временные надписи
     let technical = "Технические характеристики"
@@ -116,7 +95,6 @@ struct ProductProprietesView: View {
                             .background(
                                 RoundedRectangle(cornerRadius: 8)
                                     .foregroundColor(self.proprety == proprety ? .cyanAR.opacity(0.1) : .whiteAR)
-                                
                             )
                     }
                 }
@@ -149,7 +127,5 @@ struct ProductProprietesView: View {
             }
             .padding(.horizontal)
         }
-        
-        
     }
 }

@@ -21,7 +21,11 @@ struct Feedbacks: View {
                                 .font(Font.headline.weight(.bold))
                             StarsView(rating: feedback.rating, maxRating: 5)
                         }
+                        .padding(.leading)
+                        .frame(width: WIDTH, alignment: .leading)
                         Text("\(feedback.description)")
+                            .padding(.leading)
+                            .frame(width: WIDTH, alignment: .leading)
                     }
                 }
             }

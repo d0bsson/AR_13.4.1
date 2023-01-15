@@ -22,7 +22,7 @@ extension Element {
         [
         Element(sort: 1, name: "запись слева 1", label: "запись справа 1"),
         Element(sort: 2, name: "запись слева 2", label: "запись справа 2"),
-        Element(sort: 3, name: "запись слева 3", label: "запись справа 3")
+        Element(sort: 3, name: "запись слева 3", label: "запись справа 3"),
         ]
         
     }
