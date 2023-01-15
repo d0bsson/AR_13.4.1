@@ -11,8 +11,8 @@ struct Feedbacks: View {
     private let feedbacks = Feedback.getFeedbacks()
     
     var body: some View {
-        VStack{
-            ScrollView(.vertical) {
+        VStack {
+            ScrollView {
                 VStack {
                     ForEach(feedbacks, id: \.sort) { feedback in
                         Divider()
@@ -48,8 +48,8 @@ struct StarsView: View {
         }
         
         stars.overlay(
-            GeometryReader { g in
-                let width = CGFloat(rating) / CGFloat(maxRating) * g.size.width
+            GeometryReader { star in
+                let width = CGFloat(rating) / CGFloat(maxRating) * star.size.width
                 ZStack(alignment: .leading) {
                     Rectangle()
                         .frame(width: width)
